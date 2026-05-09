@@ -46,7 +46,7 @@ const currentPage = window.location.pathname.split("/").pop();
 
 // Solo aplicamos el efecto si estamos en la página de certificaciones
 // (Ojo: Si en tu servidor se llama distinto, cambia el nombre aquí)
-if (header && currentPage === "certificaciones.html") {
+if (currentPage.includes("certificaciones.html") || currentPage.endsWith("certificaciones")) {
   window.addEventListener("scroll", () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
