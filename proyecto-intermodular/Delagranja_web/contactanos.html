@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la Granja | Calidad y Servicio</title>
+    <meta name="description"
+        content="Carnicería en San Cristóbal, Venezuela, con productos de primera calidad. Disfruta de nuestra atención personalizada y un trato cordial.">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/imagen/icon_page.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="whatsapp-bar">
+        <span>¡Haz tu pedido por WhatsApp! 📱 </span>
+        <a href="https://wa.me/message/JX4MEJNCGX6CE1" target="_blank">Escríbenos aquí</a>
+    </div>
+    <header class="encabezado">
+        <div class="logo">
+            <a href="./index.html"><img src="./assets/imagen/logo_sin fondo.png" alt="logo del negocio" width="140"
+                    height="100"></a>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html" class="btn-productos">Productos</a></li>
+                <li><a href="./donde.html">Nuestra Sede</a></li>
+                <li><a href="./contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Contáctanos</h2>
+            <form action="#" method="POST">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="empresa">Empresa / Organización</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono de contacto</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+58 414-700-00-00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="departamento">¿Con quién deseas hablar?</label>
+                    <select id="departamento" name="departamento">
+                        <option value="general">Información General</option>
+                        <option value="ventas">Ventas / Presupuestos</option>
+                        <option value="rrhh">Recursos Humanos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Tu mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu consulta..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad" style="font-weight: normal; margin:0;">
+                        He leído y acepto la <a href="#">política de privacidad</a>.
+                    </label>
+                </div>
+
+                <div class="botones-container">
+                    <button type="reset">Cancelar</button>
+                    <button type="submit">Enviar Mensaje</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+    <footer class="pie-de-pagina">
+
+        <div class="footer-contenedor-columnas">
+            <div class="footer-columna">
+                <a href="./index.html">
+                    <img src="./assets/imagen/logo_sin fondo_correcto_IA.png" alt="logo del negocio"
+                        class="footer-logo">
+                </a>
+                <p>Llevando la mejor calidad a tu mesa. Carnes frescas, trato cordial y atención personalizada en San
+                    Cristóbal.</p>
+            </div>
+
+
+
+            <div class="footer-columna">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com/delagranja_sc/?hl=esl" target="_blank" class="enlace-instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p><strong>📍 Dirección:</strong> Barrio Obrero, San Cristóbal, Venezuela.</p>
+                <p><strong>🕒 Lunes a Sábado:</strong> 8:00 am - 6:00 pm</p>
+                <p><strong>🕒 Domingo:</strong> 8:00 am - 1:00 pm</p>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2026 De la Granja. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

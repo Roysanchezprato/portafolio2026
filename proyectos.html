@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Proyectos actuales, estudios en curso y objetivos de certificación técnica de Roy Sánchez Prato.">
+    <link rel="icon" type="image/png" href="./assets/Logo/Favicon_grande.png">
+    <title>Proyectos | Roy Sánchez Prato</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="./assets/Logo/Logo_sin_fondo.png" alt="Logo RSP" class="logo-img">
+        </a>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="certificaciones.html">Certificaciones</a></li>
+                <li><a href="insignias.html">Insignias</a></li>
+                <li><a href="proyectos.html" class="activo">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 20px;">Proyectos & <span class="terminal-text">Objetivos</span>
+        </h2>
+
+        <p
+            style="text-align: center; color: var(--sec-accent-color); max-width: 700px; margin: 0 auto 50px auto; font-size: 1.1rem;">
+            Mi desarrollo profesional es continuo. Aquí presento los pilares académicos y técnicos en los que estoy
+            trabajando actualmente para fortalecer mi perfil.
+        </p>
+
+        <div class="proyectos-grid">
+
+            <!-- Proyecto 1: ASIR -->
+            <div class="proyecto-card">
+                <div class="proyecto-img-container">
+                    <img src="./assets/proyectos/ASIR_Prometeo.png"
+                        alt="Administración de Sistemas Informáticos en Red">
+                </div>
+                <h3 class="proyecto-title">Administración de Sistemas Informáticos en Red</h3>
+                <p class="proyecto-desc">
+                    Formación especializada enfocada en la gestión avanzada de servidores, seguridad informática y
+                    diseño de redes eficientes. El objetivo es garantizar la alta disponibilidad, rendimiento
+                    tecnológico y blindaje de la infraestructura de cualquier organización.
+                </p>
+                <div class="proyecto-status status-active">
+                    [STATUS: EN CURSO]
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Máster -->
+            <div class="proyecto-card">
+                <div class="proyecto-img-container">
+                    <img src="./assets/proyectos/Master_cybersecurity.png" alt="Máster en Ciberseguridad">
+                </div>
+                <h3 class="proyecto-title">Máster de Especialización en Ciberseguridad</h3>
+                <p class="proyecto-desc">
+                    Capacitación avanzada enfocada en Gestión de Riesgos, Seguridad Ofensiva (Pentesting) y Operaciones
+                    de Seguridad (SOC). Incluye el uso de lenguajes como Python y JS, así como bases de datos
+                    (SQL/NoSQL) aplicados a la automatización y auditoría.
+                </p>
+                <div class="proyecto-status status-active">
+                    [STATUS: EN CURSO]
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Certificaciones Futuras -->
+            <div class="proyecto-card">
+                <div class="proyecto-img-container">
+                    <img src="./assets/proyectos/Insignias_que quiero.png" alt="Preparación para certificaciones">
+                </div>
+                <h3 class="proyecto-title">Certificaciones de Industria (AZ-104 & CCNA)</h3>
+                <p class="proyecto-desc">
+                    Trabajando de forma autodidacta y en laboratorios prácticos para obtener validaciones del más alto
+                    nivel técnico. Mis objetivos a corto plazo son la certificación Microsoft Azure Administrator
+                    (AZ-104) y Cisco Certified Network Associate (CCNA).
+                </p>
+                <div class="proyecto-status status-pending">
+                    [STATUS: PREPARANDO]
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SECCIÓN: DEMO INTERACTIVA INTERMODULAR -->
+    <section class="seccion-intermodular">
+        <h2 style="text-align: center; margin-bottom: 40px;">Proyecto Intermodular - <span class="terminal-text">De la
+                Granja</span></h2>
+
+        <div class="browser-window">
+            <div class="browser-header">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <div class="browser-address-bar">https://roy-sanchez.asir/demo-intermodular/</div>
+            </div>
+
+            <!-- El iframe que carga tu demo local -->
+            <iframe src="./proyecto-intermodular/Delagranja_web/" class="demo-iframe"
+                title="Demo Proyecto Roy"></iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="color: var(--sec-accent-color); font-size: 1.1rem; margin-bottom: 20px;">
+                Tecnologías implementadas en el despliegue y desarrollo:
+            </p>
+
+            <div class="tech-container">
+                <span class="tech-item">HTML</span>
+                <span class="tech-item">CSS</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">Windows Server</span>
+                <span class="tech-item">Apache2</span>
+                <span class="tech-item">pgAdmin SQL</span>
+                <span class="tech-item">AWS Cloud</span>
+                <span class="tech-item">Cisco Packet Tracer</span>
+            </div>
+
+            <!-- Botón para ir a los documentos PDF -->
+            <a href="proyecto-detalle.html" class="btn-proyecto-pdf">
+                VER DOCUMENTACIÓN TÉCNICA DEL PROYECTO (PDF)
+            </a>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="social-footer">
+            <a href="https://github.com/Roysanchezprato" target="_blank"><img src="./assets/Logo/github.png"
+                    alt="GitHub" class="social-icon"></a>
+            <a href="https://www.linkedin.com/in/roysp/" target="_blank"><img src="./assets/Logo/linkedin.png"
+                    alt="LinkedIn" class="social-icon"></a>
+            <a href="mailto:rrzehcnas@gmail.com"><img src="./assets/Logo/correo-electronico.png" alt="Email"
+                    class="social-icon"></a>
+        </div>
+        <p>Desarrollado con ❤️ y código por Roy Sánchez Prato</p>
+        <p>Técnico informático | © <span id="year"></span> - All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

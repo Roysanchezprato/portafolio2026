@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Roy Sánchez Prato. Técnico informático especializado en Administración de Sistemas en Red y Ciberseguridad.">
+    <link rel="icon" type="image/png" href="./assets/Logo/Favicon_grande.png">
+    <title>Roy Sánchez Prato | Ciberseguridad & Sistemas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN GLOBAL -->
+    <header>
+        <div class="logo-text">root@roysanchez:~#</div>
+        <!-- Botón de menú para móviles -->
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul class="nav-links">
+                <!-- La clase "activo" resalta en qué página estamos -->
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="certificaciones.html">Certificaciones</a></li>
+                <li><a href="insignias.html">Insignias</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO ESPECÍFICO DE ESTA PÁGINA -->
+    <!-- Clases en línea para centrar el contenido verticalmente solo en el inicio -->
+    <main style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh; text-align: center;">
+        
+        <section id="presentacion-hero">
+            <!-- Contenedor de la foto de perfil -->
+            <div class="foto-hero" style="margin-bottom: 30px;">
+                <!-- Revisa que la ruta coincida con la tuya -->
+                <img src="./assets/Foto de perfil/Foto_perfil.png" alt="Foto de perfil de Roy Sánchez Prato" 
+                     style="width: 350px; height: 350px; object-fit: cover; border-radius: 50%; border: 4px solid var(--base-color); box-shadow: var(--glow-blue); transition: transform 0.5s ease;">
+            </div>
+
+            <!-- Textos de presentación -->
+            <p class="terminal-text" style="font-size: 1.5rem; margin-bottom: 15px;">> Hello, World! 👋</p>
+            
+            <h1 style="font-size: 3.5rem; color: var(--text-main); margin-bottom: 10px;">
+                Soy <span style="color: var(--accent-color); text-shadow: var(--glow-green);">Roy Sánchez Prato</span>
+            </h1>
+            
+            <h2 style="font-size: 1.8rem; color: var(--base-color); margin-bottom: 25px;">Técnico Informático</h2>
+            
+            <p style="font-size: 1.2rem; color: var(--sec-accent-color); max-width: 600px; margin: 0 auto 40px auto;">
+                ¡Aportar y crecer de forma recíproca es mi motor! Apasionado por lograr que la infraestructura de sistemas sea robusta, eficiente y esté totalmente blindada.
+            </p>
+
+            <!-- Botones de Acción -->
+            <div class="botones-hero" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <!-- Enlace al currículum en PDF -->
+                <a href="./assets/Documentos/CV_RoySanchezPrato.pdf" download class="btn-secundario" style="display: flex; align-items: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download CV
+                </a>
+                
+                <a href="insignias.html" class="btn-primario">Ver mis Insignias</a>
+                <a href="contacto.html" class="btn-secundario">Contacto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer>
+        <p>Desarrollado con ❤️ y código por Roy Sánchez Prato</p>
+        <p>Técnico informático | © <span id="year"></span> - All rights reserved</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

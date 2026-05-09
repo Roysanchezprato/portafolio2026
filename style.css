@@ -1,0 +1,1003 @@
+/* Importación de fuentes: Roboto para texto, Funnel Sans para títulos, y Fira Code para toques de consola */
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@400;600&display=swap");
+
+/* Variables Globales - Paleta de Ciberseguridad */
+:root {
+    --bg-color: #121415; /* Fondo más oscuro para estilo terminal */
+    --bg-panel: rgba(255, 255, 255, 0.03); /* Fondo semitransparente para tarjetas */
+    --accent-color: #97ef4f; /* Tu verde */
+    --base-color: #1376a0; /* Tu azul */
+    --text-main: #e0e0e0; /* Texto claro legible */
+    --sec-accent-color: #868e96; /* Gris para textos secundarios */
+    --spacing: 20px;
+    --border-radius: 12px;
+    --glow-green: 0 0 10px rgba(151, 239, 79, 0.4);
+    --glow-blue: 0 0 10px rgba(19, 118, 160, 0.4);
+}
+
+/* Reseteo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el footer se quede abajo siempre */
+}
+
+/* Tipografía y Títulos */
+h1, h2, h3, h4 {
+    font-family: "Funnel Sans", sans-serif;
+}
+
+.terminal-text {
+    font-family: "Fira Code", monospace;
+    color: var(--accent-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+/* Navegación Global */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(18, 20, 21, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(19, 118, 160, 0.3);
+    
+    /* Vuelve a ser sticky para todas las páginas */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out; /* Mantiene la animación */
+}
+
+/* Solo se activará cuando JS añada esta clase */
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+.logo-text {
+    font-family: "Fira Code", monospace;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover, .nav-links a.activo {
+    color: var(--accent-color);
+    text-shadow: var(--glow-green);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Menú Hamburguesa (Oculto en PC) */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--base-color);
+    cursor: pointer;
+}
+
+/* Contenedor Principal (Para los contenidos de todas las páginas) */
+main {
+    flex: 1; /* Empuja el footer hacia abajo */
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Botones Globales */
+.btn-primario, .btn-secundario {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.btn-primario {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-primario:hover {
+    background-color: rgba(151, 239, 79, 0.1);
+    box-shadow: var(--glow-green);
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid var(--base-color);
+    color: var(--base-color);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(19, 118, 160, 0.1);
+    box-shadow: var(--glow-blue);
+    transform: translateY(-3px);
+}
+
+/* Footer Global */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--bg-panel);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto; /* Asegura que se quede abajo */
+}
+
+footer p {
+    color: var(--sec-accent-color);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+footer p:first-child {
+    color: var(--accent-color);
+    font-family: "Fira Code", monospace;
+}
+
+
+
+/* --- TAMAÑO Y ANIMACIÓN DEL LOGO --- */
+.logo-img {
+    height: 100px; /*LOGOOOOO*/
+    width: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px var(--accent-color)); /* Brillo verde al pasar el ratón */
+}
+
+/* --- ANIMACIÓN ICONOS REDES SOCIALES --- */
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Más separación entre ellos */
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 45px; /* ¡Casi el doble de grandes que antes! */
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-8px) scale(1.4); /* Salta hacia arriba y se agranda */
+    filter: drop-shadow(0 0 15px var(--accent-color)); /* Se ilumina en verde */
+}
+
+/* --- TIMELINE DE FORMACIÓN & CERTIFICACIONES (Efecto Cascada) --- */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px; 
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(19, 118, 160, 0.3); /* Nuestro borde color azul cristal */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color); /* Tu verde hacker */
+    border-radius: 50%;
+    box-shadow: var(--glow-green); /* Brillo verde */
+    z-index: 2;
+}
+
+.timeline-date {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline-content {
+    background: var(--bg-panel);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-content h3 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px); /* Efecto cascada a la derecha */
+    border-color: var(--accent-color);
+    box-shadow: var(--glow-green);
+}
+
+.company {
+    display: block;
+    color: var(--base-color); /* Tu azul */
+    font-family: 'Fira Code', monospace;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* --- Animación Scroll Reveal (Para la clase 'hidden') --- */
+.hidden {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- VITRINA DE INSIGNIAS PREMIUM --- */
+.insignias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.insignia-card {
+    background: linear-gradient(145deg, rgba(30, 34, 38, 0.9), rgba(18, 20, 21, 0.9));
+    border: 1px solid rgba(19, 118, 160, 0.3);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Sombras base */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    /* Transición suave para el hover 3D y el brillo */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Efecto de luz de escáner de fondo (Ciberseguridad) */
+.insignia-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(151, 239, 79, 0.1), transparent);
+    transition: top 0.6s ease;
+    z-index: 0;
+}
+
+.insignia-card:hover::before {
+    top: 100%; /* El rayo de luz baja escaneando la tarjeta */
+}
+
+/* Efecto Hover Premium */
+.insignia-card:hover {
+    transform: translateY(-15px); /* Salta hacia arriba */
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(151, 239, 79, 0.3); /* Brillo intenso */
+}
+
+.insignia-img-container {
+    position: relative;
+    z-index: 1; /* Para que esté por encima de la luz */
+    margin-bottom: 25px;
+}
+
+.insignia-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Al pasar el ratón, la imagen de la medalla rota ligeramente y brilla */
+.insignia-card:hover .insignia-img {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 25px var(--base-color));
+}
+
+.insignia-title {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.insignia-org {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.insignia-desc {
+    color: var(--sec-accent-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- TARJETAS DE PROYECTOS / OBJETIVOS --- */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.proyecto-card {
+    background-color: var(--bg-panel);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--base-color);
+    box-shadow: var(--glow-blue);
+}
+
+.proyecto-img-container {
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proyecto-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-card:hover .proyecto-img-container img {
+    transform: scale(1.1); /* Zoom suave a la imagen al hacer hover */
+}
+
+.proyecto-title {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    min-height: 55px; /* Alinea los títulos si uno tiene dos líneas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyecto-desc {
+    color: var(--sec-accent-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    flex-grow: 1; /* Empuja el status hacia abajo */
+    margin-bottom: 20px;
+}
+
+/* Etiqueta de Estado (Terminal style) */
+.proyecto-status {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.status-active {
+    background-color: rgba(151, 239, 79, 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.status-pending {
+    background-color: rgba(19, 118, 160, 0.1);
+    color: var(--base-color);
+    border: 1px solid var(--base-color);
+}
+
+/* prueba 09/05  */ 
+
+/* --- PROYECTOS ACTUALES */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Un poco más anchos */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.proyecto-card {
+    background-color: var(--bg-panel);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Permite que el recuadro crezca con el contenido */
+    transition: all 0.4s ease;
+}
+
+.proyecto-img-container {
+    width: 100%;
+    height: 220px; /* Aquí controlas el tamaño de la imagen */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(19, 118, 160, 0.2);
+}
+
+.proyecto-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.proyecto-card:hover .proyecto-img-container img {
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón */
+}
+
+/* --- SECCIÓN INTERMODULAR (EL GRAN FINAL) --- */
+.seccion-intermodular {
+    margin-top: 100px;
+    padding-top: 50px;
+    border-top: 2px solid rgba(19, 118, 160, 0.2);
+    width: 100%;
+}
+
+.proyecto-destacado-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.img-intermodular-link {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--base-color);
+    box-shadow: var(--glow-blue);
+    transition: 0.4s;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.img-intermodular-link:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+    box-shadow: var(--glow-green);
+}
+
+.img-intermodular-link img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Etiquetas de tecnologías (Tech Stack) */
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tech-item {
+    background: rgba(151, 239, 79, 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+/* Contenedor para asegurar que el botón esté centrado */
+.btn-proyecto-pdf {
+    display: block;             
+    width: fit-content;         
+    margin: 40px auto 40px;    /* 40px arriba, AUTO a los lados (centra), 120px abajo (aire) */
+    
+    padding: 15px 30px;         /* Mantengo los 15px y doy un poco más a los lados */
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;      /* Quita el subrayado del enlace */
+}
+
+/* --- HOVER EXACTO DE TU CAPTURA --- */
+.btn-proyecto-pdf:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);     /* Cambia el texto al color de fondo como en tu captura */
+    box-shadow: 0 0 20px var(--accent-color);
+}
+/* final del botón de ver proyecto */
+
+/* LA DEMOOOO */
+
+/* --- VENTANA DE NAVEGADOR PARA LA DEMO --- */
+.browser-window {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #1a1c1e;
+    border-radius: 10px;
+    border: 1px solid rgba(19, 118, 160, 0.5);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.browser-header {
+    background: #2d333b;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.browser-address-bar {
+    flex-grow: 1;
+    background: #121415;
+    border-radius: 6px;
+    padding: 5px 15px;
+    color: var(--sec-accent-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+}
+
+.demo-iframe {
+    width: 100%;
+    height: 600px; /* Altura para que se pueda navegar bien */
+    border: none;
+    background: white; /* Color de fondo por defecto */
+}
+
+
+/* --- PÁGINA DE CONTACTO --- */
+
+/*
+.contacto-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: flex-start;
+}*/
+
+/* Sección Izquierda: Animación del Logo y Texto */
+/*.contacto-info {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contacto-logo-animado {
+    width: 250px;
+    height: auto;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 15px var(--accent-color));
+    animation: flotarLogo 4s ease-in-out infinite;
+} */
+
+
+
+/* ================================================= */
+/* --- PÁGINA DE CONTACTO (CENTRADA Y ANIMADA) --- */
+/* ================================================= */
+
+.contacto-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contacto-info {
+    width: 100%;
+    max-width: 850px; 
+    text-align: center;
+    padding: 20px;
+}
+
+.contacto-logo-animado {
+    width: 220px; 
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px var(--accent-color));
+    animation: flotarLogo 4s ease-in-out infinite;
+}
+
+
+/*mensaje de envío de mail */
+
+/* Estilo para el mensaje de éxito tipo terminal */
+#status.success-style {
+    margin-top: 20px;
+    padding: 12px;  
+    border: 1px solid #97ef4f; 
+    background-color: rgba(176, 255, 0, 0.03); 
+    color: #97ef4f;    
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(176, 255, 0, 0.4);     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Pequeña animación para que el brillo "respire" */
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); }
+}
+
+/* Estilo por si hay un error */
+#status.error-style {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ff4d4d;
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+/* Animación de flotación del logo */
+@keyframes flotarLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); filter: drop-shadow(0 0 25px var(--base-color)); }
+    100% { transform: translateY(0px); }
+}
+
+/* Texto en movimiento (Marquee) - Velocidad 30s */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(19, 118, 160, 0.05);
+    border: 1px solid rgba(19, 118, 160, 0.3);
+    border-radius: 50px;
+    padding: 12px 0;
+    margin: 20px 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    animation: moverTexto 30s linear infinite; 
+}
+
+@keyframes moverTexto {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Caja del Formulario Centrada */
+.formulario-box {
+    width: 100%;
+    max-width: 700px; 
+    background: var(--bg-panel);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+}
+
+/* Mantenemos el estilo de las filas y grupos */
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left; /* Para que las etiquetas de nombre/email miren a la izquierda */
+}
+
+.input-group label {
+    display: block;
+    color: var(--base-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group textarea, 
+.input-group select {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--text-main);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-enviar:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* ================================================= */
+/* --- FINAL DE  PÁGINA DE CONTACTO (CENTRADA Y ANIMADA) --- */
+/* ================================================= */
+
+/* Animación de flotación suave para el logo */
+@keyframes flotarLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); filter: drop-shadow(0 0 25px var(--base-color)); }
+    100% { transform: translateY(0px); }
+}
+
+/* Texto en movimiento infinito (Marquee) */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(19, 118, 160, 0.1);
+    border: 1px solid var(--base-color);
+    border-radius: 30px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    animation: moverTexto 15s linear infinite;
+}
+
+@keyframes moverTexto {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Sección Derecha: Formulario */
+.formulario-box {
+    flex: 1;
+    background: var(--bg-panel);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    color: var(--base-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group textarea, 
+.input-group select {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(151, 239, 79, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-enviar:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Responsivo para el formulario */
+@media (max-width: 900px) {
+    .contacto-container {
+        flex-direction: column;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Diseño Responsivo (Móviles y Tablets) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Oculto fuera de la pantalla */
+        width: 100%;
+        background-color: rgba(18, 20, 21, 0.98);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        transition: left 0.4s ease;
+        border-bottom: 1px solid var(--base-color);
+    }
+
+    .nav-links.nav-active {
+        left: 0; /* Aparece deslizando desde la izquierda */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
