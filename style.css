@@ -289,25 +289,25 @@ footer p:first-child {
 
 /* --- VITRINA DE INSIGNIAS PREMIUM --- */
 .insignias-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; 
     margin-top: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .insignia-card {
     background: linear-gradient(145deg, rgba(30, 34, 38, 0.9), rgba(18, 20, 21, 0.9));
     border: 1px solid rgba(19, 118, 160, 0.3);
     border-radius: 20px;
-    padding: 40px 30px;
-    width: 350px;
+    padding: 30px 20px; 
+    width: 100%; 
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* Sombras base */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    /* Transición suave para el hover 3D y el brillo */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
@@ -342,8 +342,8 @@ footer p:first-child {
 }
 
 .insignia-img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
     transition: transform 0.5s ease, filter 0.5s ease;
@@ -357,7 +357,7 @@ footer p:first-child {
 
 .insignia-title {
     color: var(--text-main);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     position: relative;
     z-index: 1;
@@ -375,7 +375,7 @@ footer p:first-child {
 
 .insignia-desc {
     color: var(--sec-accent-color);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     position: relative;
     z-index: 1;
@@ -590,7 +590,7 @@ footer p:first-child {
     text-decoration: none;      /* Quita el subrayado del enlace */
 }
 
-/* --- HOVER EXACTO DE TU CAPTURA --- */
+/* --- --- */
 .btn-proyecto-pdf:hover {
     background: var(--accent-color);
     color: var(--bg-color);     /* Cambia el texto al color de fondo como en tu captura */
@@ -963,8 +963,27 @@ footer p:first-child {
     }
 }
 
-/* Diseño Responsivo (Móviles y Tablets) */
+/* Nuevo: Para tablets y pantallas medianas (Insignias a 2 columnas) */
+@media (max-width: 1200px) {
+    .insignias-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsivo para el formulario (El que ya tenías) */
+@media (max-width: 900px) {
+    .contacto-container {
+        flex-direction: column;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Diseño Responsivo Móviles y Tablets */
 @media (max-width: 768px) {
+    /* ---  CÓDIGO DEL MENÚ --- */
     header {
         padding: 15px 20px;
     }
@@ -987,7 +1006,7 @@ footer p:first-child {
     }
 
     .nav-links.nav-active {
-        left: 0; /* Aparece deslizando desde la izquierda */
+        left: 0; /* desde la derecha */
     }
 
     .nav-links li {
@@ -999,5 +1018,10 @@ footer p:first-child {
         display: block;
         padding: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* --- LO NUEVO DE LAS INSIGNIAS --- */
+    .insignias-container {
+        grid-template-columns: 1fr; /* Pasa a 1 sola columna en móviles */
     }
 }
