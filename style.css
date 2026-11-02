@@ -3,12 +3,18 @@
 
 /* Variables Globales - Paleta de Ciberseguridad */
 :root {
-    --bg-color: #121415; /* Fondo más oscuro para estilo terminal */
-    --bg-panel: rgba(255, 255, 255, 0.03); /* Fondo semitransparente para tarjetas */
-    --accent-color: #97ef4f; /* Tu verde */
-    --base-color: #1376a0; /* Tu azul */
-    --text-main: #e0e0e0; /* Texto claro legible */
-    --sec-accent-color: #868e96; /* Gris para textos secundarios */
+    --bg-color: #121415;
+    /* Fondo más oscuro para estilo terminal */
+    --bg-panel: rgba(255, 255, 255, 0.03);
+    /* Fondo semitransparente para tarjetas */
+    --accent-color: #97ef4f;
+    /* Tu verde */
+    --base-color: #1376a0;
+    /* Tu azul */
+    --text-main: #e0e0e0;
+    /* Texto claro legible */
+    --sec-accent-color: #868e96;
+    /* Gris para textos secundarios */
     --spacing: 20px;
     --border-radius: 12px;
     --glow-green: 0 0 10px rgba(151, 239, 79, 0.4);
@@ -29,11 +35,15 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Para que el footer se quede abajo siempre */
+    min-height: 100vh;
+    /* Para que el footer se quede abajo siempre */
 }
 
 /* Tipografía y Títulos */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Funnel Sans", sans-serif;
 }
 
@@ -57,12 +67,13 @@ header {
     background-color: rgba(18, 20, 21, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(19, 118, 160, 0.3);
-    
+
     /* Vuelve a ser sticky para todas las páginas */
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: transform 0.4s ease-in-out; /* Mantiene la animación */
+    transition: transform 0.4s ease-in-out;
+    /* Mantiene la animación */
 }
 
 /* Solo se activará cuando JS añada esta clase */
@@ -89,7 +100,8 @@ header {
     padding: 5px 10px;
 }
 
-.nav-links a:hover, .nav-links a.activo {
+.nav-links a:hover,
+.nav-links a.activo {
     color: var(--accent-color);
     text-shadow: var(--glow-green);
     border-bottom: 2px solid var(--accent-color);
@@ -105,7 +117,8 @@ header {
 
 /* Contenedor Principal (Para los contenidos de todas las páginas) */
 main {
-    flex: 1; /* Empuja el footer hacia abajo */
+    flex: 1;
+    /* Empuja el footer hacia abajo */
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -113,7 +126,8 @@ main {
 }
 
 /* Botones Globales */
-.btn-primario, .btn-secundario {
+.btn-primario,
+.btn-secundario {
     display: inline-block;
     padding: 12px 28px;
     font-family: "Fira Code", monospace;
@@ -153,7 +167,8 @@ footer {
     padding: 30px 20px;
     background-color: var(--bg-panel);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto; /* Asegura que se quede abajo */
+    margin-top: auto;
+    /* Asegura que se quede abajo */
 }
 
 footer p {
@@ -171,34 +186,40 @@ footer p:first-child {
 
 /* --- TAMAÑO Y ANIMACIÓN DEL LOGO --- */
 .logo-img {
-    height: 100px; /*LOGOOOOO*/
+    height: 100px;
+    /*LOGOOOOO*/
     width: auto;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .logo-img:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 10px var(--accent-color)); /* Brillo verde al pasar el ratón */
+    filter: drop-shadow(0 0 10px var(--accent-color));
+    /* Brillo verde al pasar el ratón */
 }
 
 /* --- ANIMACIÓN ICONOS REDES SOCIALES --- */
 .social-footer {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Más separación entre ellos */
+    gap: 40px;
+    /* Más separación entre ellos */
     margin-bottom: 20px;
 }
 
 .social-icon {
-    width: 45px; /* ¡Casi el doble de grandes que antes! */
+    width: 45px;
+    /* ¡Casi el doble de grandes que antes! */
     height: 45px;
     object-fit: contain;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .social-icon:hover {
-    transform: translateY(-8px) scale(1.4); /* Salta hacia arriba y se agranda */
-    filter: drop-shadow(0 0 15px var(--accent-color)); /* Se ilumina en verde */
+    transform: translateY(-8px) scale(1.4);
+    /* Salta hacia arriba y se agranda */
+    filter: drop-shadow(0 0 15px var(--accent-color));
+    /* Se ilumina en verde */
 }
 
 /* --- TRAYECTORIA LABORAL --- */
@@ -208,7 +229,8 @@ footer p:first-child {
     border-radius: var(--border-radius);
     padding: 35px;
     max-width: 900px;
-    margin: 0 auto 40px auto; /* Centrado y con margen inferior de 40px */
+    margin: 0 auto 40px auto;
+    /* Centrado y con margen inferior de 40px */
     position: relative;
     overflow: hidden;
 }
@@ -264,7 +286,8 @@ footer p:first-child {
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify;
-    color: var(--text-main); /* Aseguramos el color del texto */
+    color: var(--text-main);
+    /* Aseguramos el color del texto */
 }
 
 .experiencia-hitos-title {
@@ -303,11 +326,12 @@ footer p:first-child {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px; 
+    left: 20px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(19, 118, 160, 0.3); /* Nuestro borde color azul cristal */
+    background: rgba(19, 118, 160, 0.3);
+    /* Nuestro borde color azul cristal */
 }
 
 .timeline-item {
@@ -322,9 +346,11 @@ footer p:first-child {
     top: 5px;
     width: 20px;
     height: 20px;
-    background: var(--accent-color); /* Tu verde hacker */
+    background: var(--accent-color);
+    /* Tu verde hacker */
     border-radius: 50%;
-    box-shadow: var(--glow-green); /* Brillo verde */
+    box-shadow: var(--glow-green);
+    /* Brillo verde */
     z-index: 2;
 }
 
@@ -342,7 +368,7 @@ footer p:first-child {
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-content h3 {
@@ -352,14 +378,16 @@ footer p:first-child {
 }
 
 .timeline-content:hover {
-    transform: translateX(10px); /* Efecto cascada a la derecha */
+    transform: translateX(10px);
+    /* Efecto cascada a la derecha */
     border-color: var(--accent-color);
     box-shadow: var(--glow-green);
 }
 
 .company {
     display: block;
-    color: var(--base-color); /* Tu azul */
+    color: var(--base-color);
+    /* Tu azul */
     font-family: 'Fira Code', monospace;
     font-style: italic;
     font-size: 0.95rem;
@@ -380,21 +408,63 @@ footer p:first-child {
 
 /* --- VITRINA DE INSIGNIAS PREMIUM --- */
 .insignias-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px; 
+    display: flex;
+    gap: 30px;
     margin-top: 40px;
     width: 100%;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+
+    /* Scroll horizontal suave con anclaje automático */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+
+    /* Espacio superior e inferior para no cortar el hover (-15px) ni los reflejos */
+    padding: 25px 15px 35px 15px;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--base-color) rgba(18, 20, 21, 0.8);
 }
+
+/* Personalización de la barra de desplazamiento (Chrome, Edge, Safari) */
+.insignias-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.insignias-container::-webkit-scrollbar-track {
+    background: rgba(18, 20, 21, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(19, 118, 160, 0.2);
+}
+
+.insignias-container::-webkit-scrollbar-thumb {
+    background: var(--base-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.insignias-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+    box-shadow: var(--glow-green);
+}
+
+/* Tarjeta individual adaptada al carrusel */
 .insignia-card {
+    flex: 0 0 320px;
+    /* Ancho fijo para cada tarjeta en el scroll */
+    scroll-snap-align: start;
+    /* Se fija al inicio de cada tarjeta al deslizar */
+    box-sizing: border-box;
+
     background: linear-gradient(145deg, rgba(30, 34, 38, 0.9), rgba(18, 20, 21, 0.9));
     border: 1px solid rgba(19, 118, 160, 0.3);
     border-radius: 20px;
-    padding: 30px 20px; 
-    width: 100%; 
+    padding: 30px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -416,19 +486,19 @@ footer p:first-child {
 }
 
 .insignia-card:hover::before {
-    top: 100%; /* El rayo de luz baja escaneando la tarjeta */
+    top: 100%;
 }
 
 /* Efecto Hover Premium */
 .insignia-card:hover {
-    transform: translateY(-15px); /* Salta hacia arriba */
+    transform: translateY(-15px);
     border-color: var(--accent-color);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(151, 239, 79, 0.3); /* Brillo intenso */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(151, 239, 79, 0.3);
 }
 
 .insignia-img-container {
     position: relative;
-    z-index: 1; /* Para que esté por encima de la luz */
+    z-index: 1;
     margin-bottom: 25px;
 }
 
@@ -440,7 +510,6 @@ footer p:first-child {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Al pasar el ratón, la imagen de la medalla rota ligeramente y brilla */
 .insignia-card:hover .insignia-img {
     transform: scale(1.1) rotate(5deg);
     filter: drop-shadow(0 0 25px var(--base-color));
@@ -472,6 +541,50 @@ footer p:first-child {
     z-index: 1;
 }
 
+/* Contenedor relativo para alojar posibles degradados e indicadores */
+.insignias-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Difuminado suave en el borde derecho que insinúa que hay más contenido */
+.insignias-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Texto estilo terminal que invita a interactuar */
+.carrusel-hint {
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--sec-accent-color);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.carrusel-hint span {
+    color: var(--accent-color);
+    animation: bounceRight 1.5s infinite;
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+}
+
 /* --- TARJETAS DE PROYECTOS / OBJETIVOS --- */
 .proyectos-grid {
     display: grid;
@@ -487,7 +600,7 @@ footer p:first-child {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -514,7 +627,8 @@ footer p:first-child {
 }
 
 .proyecto-card:hover .proyecto-img-container img {
-    transform: scale(1.1); /* Zoom suave a la imagen al hacer hover */
+    transform: scale(1.1);
+    /* Zoom suave a la imagen al hacer hover */
 }
 
 .proyecto-title {
@@ -522,7 +636,8 @@ footer p:first-child {
     font-size: 1.3rem;
     margin-bottom: 15px;
     text-align: center;
-    min-height: 55px; /* Alinea los títulos si uno tiene dos líneas */
+    min-height: 55px;
+    /* Alinea los títulos si uno tiene dos líneas */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -533,7 +648,8 @@ footer p:first-child {
     font-size: 0.95rem;
     line-height: 1.6;
     text-align: justify;
-    flex-grow: 1; /* Empuja el status hacia abajo */
+    flex-grow: 1;
+    /* Empuja el status hacia abajo */
     margin-bottom: 20px;
 }
 
@@ -561,12 +677,13 @@ footer p:first-child {
     border: 1px solid var(--base-color);
 }
 
-/* prueba 09/05  */ 
+/* prueba 09/05  */
 
 /* --- PROYECTOS ACTUALES */
 .proyectos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Un poco más anchos */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Un poco más anchos */
     gap: 30px;
     margin-top: 30px;
 }
@@ -578,13 +695,15 @@ footer p:first-child {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    height: auto; /* Permite que el recuadro crezca con el contenido */
+    height: auto;
+    /* Permite que el recuadro crezca con el contenido */
     transition: all 0.4s ease;
 }
 
 .proyecto-img-container {
     width: 100%;
-    height: 220px; /* Aquí controlas el tamaño de la imagen */
+    height: 220px;
+    /* Aquí controlas el tamaño de la imagen */
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 25px;
@@ -594,12 +713,13 @@ footer p:first-child {
 .proyecto-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 .proyecto-card:hover .proyecto-img-container img {
-    transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de zoom suave al pasar el ratón */
 }
 
 /* --- SECCIÓN INTERMODULAR (EL GRAN FINAL) --- */
@@ -662,11 +782,13 @@ footer p:first-child {
 
 /* Contenedor para asegurar que el botón esté centrado */
 .btn-proyecto-pdf {
-    display: block;             
-    width: fit-content;         
-    margin: 40px auto 40px;    /* 40px arriba, AUTO a los lados (centra), 120px abajo (aire) */
-    
-    padding: 15px 30px;         /* Mantengo los 15px y doy un poco más a los lados */
+    display: block;
+    width: fit-content;
+    margin: 40px auto 40px;
+    /* 40px arriba, AUTO a los lados (centra), 120px abajo (aire) */
+
+    padding: 15px 30px;
+    /* Mantengo los 15px y doy un poco más a los lados */
     background: transparent;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
@@ -678,15 +800,18 @@ footer p:first-child {
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-decoration: none;      /* Quita el subrayado del enlace */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
 }
 
 /* --- --- */
 .btn-proyecto-pdf:hover {
     background: var(--accent-color);
-    color: var(--bg-color);     /* Cambia el texto al color de fondo como en tu captura */
+    color: var(--bg-color);
+    /* Cambia el texto al color de fondo como en tu captura */
     box-shadow: 0 0 20px var(--accent-color);
 }
+
 /* final del botón de ver proyecto */
 
 /* LA DEMOOOO */
@@ -709,13 +834,26 @@ footer p:first-child {
     display: flex;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.dot { width: 12px; height: 12px; border-radius: 50%; }
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
+}
 
 .browser-address-bar {
     flex-grow: 1;
@@ -725,15 +863,17 @@ footer p:first-child {
     color: var(--sec-accent-color);
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
 }
 
 .demo-iframe {
     width: 100%;
-    height: 600px; /* Altura para que se pueda navegar bien */
+    height: 600px;
+    /* Altura para que se pueda navegar bien */
     border: none;
-    background: white; /* Color de fondo por defecto */
+    background: white;
+    /* Color de fondo por defecto */
 }
 
 
@@ -770,21 +910,21 @@ footer p:first-child {
 
 .contacto-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     margin-top: 20px;
 }
 
 .contacto-info {
     width: 100%;
-    max-width: 850px; 
+    max-width: 850px;
     text-align: center;
     padding: 20px;
 }
 
 .contacto-logo-animado {
-    width: 220px; 
+    width: 220px;
     height: auto;
     margin-bottom: 20px;
     filter: drop-shadow(0 0 15px var(--accent-color));
@@ -797,18 +937,18 @@ footer p:first-child {
 /* Estilo para el mensaje de éxito tipo terminal */
 #status.success-style {
     margin-top: 20px;
-    padding: 12px;  
-    border: 1px solid #97ef4f; 
-    background-color: rgba(176, 255, 0, 0.03); 
-    color: #97ef4f;    
+    padding: 12px;
+    border: 1px solid #97ef4f;
+    background-color: rgba(176, 255, 0, 0.03);
+    color: #97ef4f;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(176, 255, 0, 0.4);     
+    box-shadow: 0 0 12px rgba(176, 255, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -818,9 +958,17 @@ footer p:first-child {
 
 /* Pequeña animación para que el brillo "respire" */
 @keyframes pulse-glow {
-    0% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
-    100% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); }
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
 }
 
 /* Estilo por si hay un error */
@@ -837,9 +985,18 @@ footer p:first-child {
 
 /* Animación de flotación del logo */
 @keyframes flotarLogo {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); filter: drop-shadow(0 0 25px var(--base-color)); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        filter: drop-shadow(0 0 25px var(--base-color));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Texto en movimiento (Marquee) - Velocidad 30s */
@@ -860,18 +1017,23 @@ footer p:first-child {
     color: var(--accent-color);
     font-size: 1.1rem;
     font-weight: bold;
-    animation: moverTexto 30s linear infinite; 
+    animation: moverTexto 30s linear infinite;
 }
 
 @keyframes moverTexto {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Caja del Formulario Centrada */
 .formulario-box {
     width: 100%;
-    max-width: 700px; 
+    max-width: 700px;
     background: var(--bg-panel);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--border-radius);
@@ -889,7 +1051,8 @@ footer p:first-child {
 .input-group {
     margin-bottom: 25px;
     width: 100%;
-    text-align: left; /* Para que las etiquetas de nombre/email miren a la izquierda */
+    text-align: left;
+    /* Para que las etiquetas de nombre/email miren a la izquierda */
 }
 
 .input-group label {
@@ -900,8 +1063,8 @@ footer p:first-child {
     margin-bottom: 8px;
 }
 
-.input-group input, 
-.input-group textarea, 
+.input-group input,
+.input-group textarea,
 .input-group select {
     width: 100%;
     padding: 15px;
@@ -937,9 +1100,18 @@ footer p:first-child {
 
 /* Animación de flotación suave para el logo */
 @keyframes flotarLogo {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); filter: drop-shadow(0 0 25px var(--base-color)); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        filter: drop-shadow(0 0 25px var(--base-color));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Texto en movimiento infinito (Marquee) */
@@ -965,8 +1137,13 @@ footer p:first-child {
 }
 
 @keyframes moverTexto {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Sección Derecha: Formulario */
@@ -998,8 +1175,8 @@ footer p:first-child {
     margin-bottom: 8px;
 }
 
-.input-group input, 
-.input-group textarea, 
+.input-group input,
+.input-group textarea,
 .input-group select {
     width: 100%;
     padding: 15px;
@@ -1012,7 +1189,7 @@ footer p:first-child {
     transition: all 0.3s ease;
 }
 
-.input-group input:focus, 
+.input-group input:focus,
 .input-group textarea:focus,
 .input-group select:focus {
     outline: none;
@@ -1048,6 +1225,7 @@ footer p:first-child {
     .contacto-container {
         flex-direction: column;
     }
+
     .input-row {
         flex-direction: column;
         gap: 0;
@@ -1057,7 +1235,8 @@ footer p:first-child {
 /* Nuevo: Para tablets y pantallas medianas (Insignias a 2 columnas) */
 @media (max-width: 1200px) {
     .insignias-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        /* Pasa a 1 sola columna en móviles */
     }
 }
 
@@ -1066,6 +1245,7 @@ footer p:first-child {
     .contacto-container {
         flex-direction: column;
     }
+
     .input-row {
         flex-direction: column;
         gap: 0;
@@ -1074,6 +1254,7 @@ footer p:first-child {
 
 /* Diseño Responsivo Móviles y Tablets */
 @media (max-width: 768px) {
+
     /* ---  CÓDIGO DEL MENÚ --- */
     header {
         padding: 15px 20px;
@@ -1086,7 +1267,8 @@ footer p:first-child {
     .nav-links {
         position: absolute;
         top: 100%;
-        left: -100%; /* Oculto fuera de la pantalla */
+        left: -100%;
+        /* Oculto fuera de la pantalla */
         width: 100%;
         background-color: rgba(18, 20, 21, 0.98);
         flex-direction: column;
@@ -1097,7 +1279,8 @@ footer p:first-child {
     }
 
     .nav-links.nav-active {
-        left: 0; /* desde la derecha */
+        left: 0;
+        /* desde la derecha */
     }
 
     .nav-links li {
@@ -1113,6 +1296,12 @@ footer p:first-child {
 
     /* --- LO NUEVO DE LAS INSIGNIAS --- */
     .insignias-container {
-        grid-template-columns: 1fr; /* Pasa a 1 sola columna en móviles */
+        grid-template-columns: 1fr;
+        /* Pasa a 1 sola columna en móviles */
+    }
+
+    .insignia-card {
+        flex: 0 0 85vw;
+        /* Ocupa el 85% de la pantalla del móvil dejando ver que hay otra al lado */
     }
 }
